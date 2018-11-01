@@ -27,11 +27,5 @@ COLOR_GOLD='\[\033[0;33m\]'
 COLOR_DEFAULT='\[\033[0;0m\]'
 PS1="$COLOR_BLUE[\u@\h \W$COLOR_GOLD\$(__git_ps1 ' (%s)')$COLOR_BLUE]\$ $COLOR_DEFAULT"
 
-# virtualenv wrapper settings
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
-
 # lookup path for "goto" custom function defined in .aliases
-LOOKUPPATH=$HOME/repo:$HOME/src
+export LOOKUPPATH=$HOME/src
